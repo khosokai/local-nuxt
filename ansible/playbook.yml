@@ -1,0 +1,11 @@
+- name: setup server
+  hosts: all
+  become: yes
+  roles:
+    - base
+
+- name: setup middlewares
+  hosts: all
+  become: yes
+  roles:
+    - nodejs

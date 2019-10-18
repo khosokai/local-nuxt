@@ -1,0 +1,16 @@
+---
+- name: install nodejs repository
+  yum:
+    name: "{{ nodejs_repos_url }}"
+    state: present
+
+- name: install nodejs
+  yum:
+    name: nodejs
+    state: latest
+
+- name: install yarn
+  npm:
+    name: yarn
+    state: present
+    global: yes
